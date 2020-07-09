@@ -7,7 +7,7 @@ include_once "../Controllers/PhoneManagers.php";
 include_once "../Controllers/Phones.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id = $_POST['id'];
+    $id = $_REQUEST['id'];
     $phone = $_POST['phone'];
     $price = $_POST['price'];
     $color = $_POST['color'];
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 <h1>UPDATE SẢN PHẨM</h1>
 <form method="post">
-    <?php foreach ($products as $key => $product): ?>
+    <?php foreach ($phones as $key => $phone): ?>
         <input name="id" type="number" placeholder="<?php echo $phones->getId() ?>" value="<?php $phones->getId() ?>">
         <br>
     <?php endforeach; ?>
